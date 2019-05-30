@@ -12,6 +12,7 @@
 ;===========================================
 */ 
 
+//Defining Variables
 var firstName = 'Jarred';
 var lastName = 'Workman';
 var age = '23';
@@ -19,6 +20,7 @@ var street = '111 1st St';
 var city = 'New York';
 var zipCode = '123456';
 
+//Logging output
 console.log('Name: ' + firstName + ' ' + lastName);
 console.log('Age: ' + age);
 console.log('Address: ' + street + ' ' + city + ' ' + zipCode);
