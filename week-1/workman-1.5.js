@@ -1,8 +1,8 @@
 /*
 ============================================
-; Title: Assignment: Discussion 1 - Values and Variables
+; Title: Assignment: 1.5
 ; Author: Jarred Workman
-; Date: 29 May 2019
+; Date: 2 May 2019
 ; Modified By:
 ; Description: This program demonstrates the
 ; use of variables and JS powerful formatting
