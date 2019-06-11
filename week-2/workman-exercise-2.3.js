@@ -10,10 +10,11 @@
 
 //declare function property
 myName.jarred = 'Jarred';
+myName.workman = 'Workman'
 
 //Function declaration
 function myName() {
-    return myName.jarred;
+    return 'Hello ' + myName.jarred + ' ' + myName.workman;
 }
 
 //log the output
