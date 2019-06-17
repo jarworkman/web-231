@@ -8,6 +8,10 @@
 ;===========================================
 */
 
+//Displaying header
+const header = require('../week-2/librandi-header.js');
+console.log(header.display("Jarred", "Workman", "Discussion 3.1 - Control Statements"));
+
 /* Expected output
 ; You're on loop number 1
 ; You're on loop number 2
