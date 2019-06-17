@@ -8,6 +8,11 @@
 ;===========================================
 */
 
+//Displaying header
+const header = require('../week-2/workman-header');
+console.log(header.display("Jarred", "Workman", "Exercise 3.2 - Pattern Matching Functions"));
+
+//Declaring all of the functions
 function match(a, b) {
     if (a === b) {
         return true;
@@ -31,26 +36,26 @@ let testVarFour = '3';
 let testVarFive = '5';
 let testVarSix = '3';
 
-if (testVarOne === testVarTwo) {
+if(match(testVarOne, testVarTwo)) {
     logMatch(testVarOne, testVarTwo);
 } else {
     logMismatch(testVarOne, testVarTwo);
 }
 
-if (testVarThree === testVarFour) {
+if(match(testVarThree, testVarFour)) {
     logMatch(testVarThree, testVarFour);
 } else {
     logMismatch(testVarThree, testVarFour);
 }
 
-if (testVarFour === testVarSix) {
+if(match(testVarFour, testVarSix)) {
     logMatch(testVarFour, testVarSix);
 } else {
     logMismatch(testVarFour, testVarSix);
 }
 
-if (testVarFive === testVarOne) {
-    logMatch(testVarFive, testVarOne);
+if(match(testVarFour, testVarFive)) {
+    logMatch(testVarFour, testVarFive);
 } else {
-    logMismatch(testVarFive, testVarOne);
+    logMismatch(testVarFour, testVarFive);
 }
