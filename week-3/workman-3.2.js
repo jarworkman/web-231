@@ -36,6 +36,7 @@ let testVarFour = '3';
 let testVarFive = '5';
 let testVarSix = '3';
 
+//Running conditionals on variables
 if(match(testVarOne, testVarTwo)) {
     logMatch(testVarOne, testVarTwo);
 } else {
