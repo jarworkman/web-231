@@ -9,31 +9,33 @@
 */
 
 //Displaying header
-const header = require('../week-2/workman-header');
-console.log(header.display("Jarred", "Workman", "Exercise 3.3 - Control Statements"));
+const header = require("../week-2/workman-header");
+console.log(
+  header.display("Jarred", "Workman", "Exercise 3.3 - Control Statements")
+);
 
 // variable
 const choice = "C";
 
 //case statement instead of if
-switch(choice) {
-    case "A":
-        console.log("A");
+switch (choice) {
+  case "A":
+    console.log("A");
     break;
 
-    case "B":
-        console.log("B")
+  case "B":
+    console.log("B");
     break;
 
-    case "C":
-        console.log("Winner winner, chicken dinner!");
+  case "C":
+    console.log("Winner winner, chicken dinner!");
     break;
 
-    case "D":
-        console.log("D");
+  case "D":
+    console.log("D");
     break;
 
-    default:
-        console.log("Invalid Choice");
+  default:
+    console.log("Invalid Choice");
     break;
 }

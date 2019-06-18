@@ -9,54 +9,60 @@
 */
 
 //Displaying header
-const header = require('../week-2/workman-header');
-console.log(header.display("Jarred", "Workman", "Exercise 3.2 - Pattern Matching Functions"));
+const header = require("../week-2/workman-header");
+console.log(
+  header.display(
+    "Jarred",
+    "Workman",
+    "Exercise 3.2 - Pattern Matching Functions"
+  )
+);
 
 //Declaring all of the functions
 function match(a, b) {
-    if (a === b) {
-        return true;
-    } else {
-        return false;
-    }
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function logMismatch(a, b) {
-        console.log("A and B do not match, a is " + a + " and b is " + b);
+  console.log("A and B do not match, a is " + a + " and b is " + b);
 }
 
 function logMatch(a, b) {
-        console.log("A and B do match, a is " + a + " and b is " + b);
+  console.log("A and B do match, a is " + a + " and b is " + b);
 }
 
-let testVarOne = 'b';
-let testVarTwo = 'a';
-let testVarThree = 'a';
-let testVarFour = '3';
-let testVarFive = '5';
-let testVarSix = '3';
+let testVarOne = "b";
+let testVarTwo = "a";
+let testVarThree = "a";
+let testVarFour = "3";
+let testVarFive = "5";
+let testVarSix = "3";
 
 //Running conditionals on variables
-if(match(testVarOne, testVarTwo)) {
-    logMatch(testVarOne, testVarTwo);
+if (match(testVarOne, testVarTwo)) {
+  logMatch(testVarOne, testVarTwo);
 } else {
-    logMismatch(testVarOne, testVarTwo);
+  logMismatch(testVarOne, testVarTwo);
 }
 
-if(match(testVarThree, testVarFour)) {
-    logMatch(testVarThree, testVarFour);
+if (match(testVarThree, testVarFour)) {
+  logMatch(testVarThree, testVarFour);
 } else {
-    logMismatch(testVarThree, testVarFour);
+  logMismatch(testVarThree, testVarFour);
 }
 
-if(match(testVarFour, testVarSix)) {
-    logMatch(testVarFour, testVarSix);
+if (match(testVarFour, testVarSix)) {
+  logMatch(testVarFour, testVarSix);
 } else {
-    logMismatch(testVarFour, testVarSix);
+  logMismatch(testVarFour, testVarSix);
 }
 
-if(match(testVarFour, testVarFive)) {
-    logMatch(testVarFour, testVarFive);
+if (match(testVarFour, testVarFive)) {
+  logMatch(testVarFour, testVarFive);
 } else {
-    logMismatch(testVarFour, testVarFive);
+  logMismatch(testVarFour, testVarFive);
 }

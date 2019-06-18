@@ -9,8 +9,10 @@
 */
 
 //Displaying header
-const header = require('../week-2/librandi-header.js');
-console.log(header.display("Jarred", "Workman", "Discussion 3.1 - Control Statements"));
+const header = require("../week-2/librandi-header.js");
+console.log(
+  header.display("Jarred", "Workman", "Discussion 3.1 - Control Statements")
+);
 
 /* Expected output
 ; You're on loop number 1
@@ -19,9 +21,9 @@ console.log(header.display("Jarred", "Workman", "Discussion 3.1 - Control Statem
 */
 
 // declaring condition
-let condition = 5
+let condition = 5;
 
 //initiate for loop
 for (i = 0; i < condition; i++) {
-    console.log("You're on loop number " + i);
+  console.log("You're on loop number " + i);
 }
