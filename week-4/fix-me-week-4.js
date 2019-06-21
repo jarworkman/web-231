@@ -17,6 +17,19 @@ console.log(
     "Discussion 4.1 - Arrays"
   )
 );
+
+/* Expected output
+; I really love the number 3, check it out! 3
+;
+; 0
+; 1
+; 2
+; 3
+; 5
+;
+*/
+
+
 //instantiate array
 var number = [0,1,2,3,4,5];
 
