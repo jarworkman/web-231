@@ -10,7 +10,7 @@
 
 //Displaying header
 const header = require("../week-2/workman-header");
-console.log(header.display("Jarred", "Workman", "Exercise 4.2 - Arrays"));
+console.log(header.display("Jarred", "Workman", "Exercise 4.3 - Filtering"));
 
 //declare vehicle array
 let vehicles = ['Car', 'Boat', 'Plane', 'Ship', 'Helicopter'];
