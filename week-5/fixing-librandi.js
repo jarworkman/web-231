@@ -16,7 +16,7 @@ animals.set('Parrot','bird');
 //iterate each value and its key
 animals.forEach(function(key, value) {
     console.log('The ' + value + ' is a type of ' + key);
-})
+});
 
 //state the size of the map
 console.log(animals.size);
