@@ -16,7 +16,11 @@ console.log(header.display("Jarred", "Workman", "Exercise 5.1 - Discussion"));
 let person = {
     firstName: 'John',
     lastName: 'Henry',
-    age
+    age,
+
+    setAge(val) {
+        this.age = val;
+    }
 };
 
 //Log person properties
