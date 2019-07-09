@@ -12,12 +12,14 @@
 const header = require("../week-2/workman-header");
 console.log(header.display("Jarred", "Workman", "Exercise 5.1 - Discussion"));
 
+//Initialize person
 let person = {
     firstName: 'John',
     lastName: 'Henry',
     age
 };
 
+//Log person properties
 console.log('My name is ' + person.firstName + ' ' + person.lastName + ` I'm ` + person.age + ' years old.');
 
 
