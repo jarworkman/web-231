@@ -1,0 +1,69 @@
+<!--
+============================================
+; Title:  workman-7.3.html
+; Author: Jarred Workman 
+; Date:   15 July 2019
+; Description: Show how JS is inserted into
+; a web page using tables
+;===========================================
+-->
+<!--Create HTML Document-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Client-Side Javascript</title>
+
+    <link rel="stylesheet" href="../site.css" />
+    <script>
+      //Displaying header const header = require("../week-2/workman-header");
+      const header = require("../week-2/workman-header");
+      console.log(
+        header.display(
+          "Jarred",
+          "Workman",
+          "Exercise 7.3 - Client Side Javascript"
+        )
+      );
+    </script>
+  </head>
+  <body>
+    <script>
+      //Write first list to HTML
+      document.write(
+        `<ol>
+                <li>Cereal</li>
+                <li>Shampoo</li>
+                <li>Grapes</li>
+                <li>Chicken</li>
+                <li>Pork</li>
+        </ol>`
+      );
+    </script>
+    <div id="groceries"></div>
+    <script>
+      //Write 2nd list to HTML
+      let h1 = document.getElementById("groceries");
+      h1.insertAdjacentHTML(
+        "afterbegin",
+        `
+                        <h1>Groceries</h1>
+                        <table>
+                                <thead>
+                                <tr>
+                                <th>Groceries</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr><td>Apple</td></tr>
+                                <tr><td>Pizza</td></tr>
+                                <tr><td>Rice</td></tr>
+                                <tr><td>Tortillas</td></tr>
+                                <tr><td>Pasta</td></tr>
+                                </tbody>
+                        </table>
+                `
+      );
+    </script>
+  </body>
+</html>
