@@ -1,0 +1,82 @@
+<!--
+============================================
+; Title:  workman-8.3.html
+; Author: Jarred Workman 
+; Date:   22 July 2019
+; Description: Creating a button and table
+; in HTML and using JQuery to bind click
+; events to elements
+;===========================================
+-->
+<!--Declaring HTML Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--Importing fonts and JQuery-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">  
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+
+<script type="text/javascript">
+//Declaring click events for button and table rows
+$(function(){
+    $("#toggle").click(function(event) {
+        event.stopPropagation();
+        $("p").toggle();
+    });
+});
+$(function(){
+    $(".fruit").click(function(event) {
+        event.stopPropagation();
+        let fruit = $(this).text();
+
+        alert(fruit);
+    });
+});
+</script>
+
+<!--Writing out text, button, and table-->
+<h3>Title</h3>
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Cras non libero vel turpis pretium fermentum. Aliquam sodales pellentesque ex vel convallis. 
+    Mauris sit amet blandit lectus. Mauris a elementum ligula. Aliquam non sodales metus, non efficitur metus.
+</p>
+<button id="toggle">Toggle</button>
+</br>
+</br>
+<table>
+    <tr class="fruit">
+        <th>Id</th>
+        <th>Fruit</th>
+    </tr>
+    <tr class="fruit">
+        <td>1</td>
+        <td>Orange</td>
+    </tr>
+    <tr class="fruit">
+        <td>2</td>
+        <td>Apple</td>
+    </tr>
+    <tr class="fruit">
+        <td>3</td>
+        <td>Blueberry</td>
+    </tr>
+    <tr class="fruit">
+        <td>4</td>
+        <td>Raspberry</td>
+    </tr>
+    <tr class="fruit">
+        <td>5</td>
+        <td>Blueberry</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!--
+============================================
+; Title:  workman-8.2.html
+; Author: Jarred Workman 
+; Date:   22 July 2019
+; Description: Creating an unordered list in
+; html and looping through an array in JS to
+; output to a webpage
+;===========================================
+-->
+<!--Create HTML Document-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+
+  <!--Define CSS-->
+  <style type="text/css">
+    html {
+      font-family: 'Roboto', sans-serif
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h3 {
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+
+<!--Declare div to hold html-->
+<div id="fruits"></div>
+
+<script>
+  //Declare fruit array of objects
+  let fruit = [
+    fruit1 = {
+        id: 1,
+        type: 'Apple'
+    },
+    fruit2 = {
+        id: 2,
+        type: 'Orange'
+    },
+    fruit3 = {
+        id: 3,
+        type: 'Raspberry'
+    }
+];
+
+//Create HTML and loop through fruit
+let out = "<h3>Fruit</h3></br><ul>";
+
+fruit.forEach(function(fruit) {
+    out += "<li>" + fruit.id + ' ' + fruit.type + "</li>"
+});
+
+out += "</ul>";
+
+//Attach to HTML
+document.getElementById('fruits').innerHTML = out;
+</script>
+
+</body>
+</html>

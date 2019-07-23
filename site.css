@@ -1,0 +1,19 @@
+html {
+    font-family: 'Roboto', sans-serif
+}
+
+p {
+    padding: 20px;
+}
+
+table {
+    padding-left: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
+
+h3 {
+    background-color: grey;
+}

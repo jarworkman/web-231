@@ -1,0 +1,109 @@
+<!--
+============================================
+; Title:  workman-8.4.html
+; Author: Jarred Workman 
+; Date:   22 July 2019
+; Description: Creating a table in HTML and
+; using JQuery to add click events to table
+; rows and outputting their results
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="../site.css">
+
+</head>
+<body>
+<!--Declaring div to insert html-->
+<div id="emps"></div>
+
+<script type="text/javascript">
+//Prototype definition
+function Employee(id, firstName, lastName, title) {
+  this.id = id;
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.title = title;
+};
+
+//Defining emps array
+let emps = [
+  new Employee(1, "Bob", "Hansen", "Account Manager"),
+  new Employee(2, "Sarah", "Langley", "Accounts Payable"),
+  new Employee(3, "Lenny", "Jackson", "Software Developer"),
+  new Employee(4, "Jack", "Johnson", "Customer Service Representative"),
+  new Employee(5, "Don", "Jensen", "Human Resource Generalist")
+];
+
+//Defining function to getEmployee
+function getEmployee(id) {
+  emps.forEach(function(employee) {
+    if (id === employee.id) {
+      alert(employee.firstName + ' ' + employee.lastName + ' ' + employee.title)
+    };
+  });
+};
+
+//Click event
+$(function () {
+  $('table tr').click(function(event) {
+    let employeeId = $(this).find("td:first").html();
+
+    getEmployee(parseInt(employeeId));
+  });
+});
+
+//HTML
+let out = (`
+        <h1>Employees</h1>
+        <table>
+                <thead>
+                <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bob Hansen</td>
+                    <td>Account Manager</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sarah Langley</td>
+                    <td>Accounts Payable</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lenny Jackson</td>
+                    <td>Software Developer</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Jack Johnson</td>
+                    <td>Customer Service Representative</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Don Jensen</td>
+                    <td>Humarn Resource Generalist</td>
+                </tr>
+                </tbody>
+        </table>
+    `   );
+    
+    //Writing out HTML
+    document.getElementById('emps').innerHTML = out;
+</script>
+
+</body>
+</html>
